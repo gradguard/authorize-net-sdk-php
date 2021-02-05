@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing PaymentEmvType
  *
- * 
+ *
  * XSD Type: paymentEmvType
  */
 class PaymentEmvType implements \JsonSerializable
@@ -120,12 +120,7 @@ class PaymentEmvType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

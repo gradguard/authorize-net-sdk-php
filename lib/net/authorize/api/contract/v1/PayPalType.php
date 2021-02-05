@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing PayPalType
  *
- * 
+ *
  * XSD Type: payPalType
  */
 class PayPalType implements \JsonSerializable
@@ -201,12 +201,7 @@ class PayPalType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

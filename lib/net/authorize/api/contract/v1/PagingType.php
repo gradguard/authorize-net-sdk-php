@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing PagingType
  *
- * 
+ *
  * XSD Type: Paging
  */
 class PagingType implements \JsonSerializable
@@ -93,12 +93,7 @@ class PagingType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

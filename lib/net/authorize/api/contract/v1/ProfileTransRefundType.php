@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ProfileTransRefundType
  *
- * 
+ *
  * XSD Type: profileTransRefundType
  */
 class ProfileTransRefundType extends ProfileTransAmountType implements \JsonSerializable
@@ -228,6 +228,7 @@ class ProfileTransRefundType extends ProfileTransAmountType implements \JsonSeri
     }
 
 
+
     // Json Serialize Code
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
@@ -255,14 +256,9 @@ class ProfileTransRefundType extends ProfileTransAmountType implements \JsonSeri
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return array_merge(parent::jsonSerialize(), $values);
     }
-    
+
     // Json Set Code
     public function set($data)
     {

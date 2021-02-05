@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CreditCardType
  *
- * 
+ *
  * XSD Type: creditCardType
  */
 class CreditCardType extends CreditCardSimpleType implements \JsonSerializable
@@ -174,6 +174,7 @@ class CreditCardType extends CreditCardSimpleType implements \JsonSerializable
     }
 
 
+
     // Json Serialize Code
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
@@ -201,14 +202,9 @@ class CreditCardType extends CreditCardSimpleType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return array_merge(parent::jsonSerialize(), $values);
     }
-    
+
     // Json Set Code
     public function set($data)
     {

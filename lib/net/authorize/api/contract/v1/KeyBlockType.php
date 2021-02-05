@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing KeyBlockType
  *
- * 
+ *
  * XSD Type: KeyBlock
  */
 class KeyBlockType implements \JsonSerializable
@@ -66,12 +66,7 @@ class KeyBlockType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

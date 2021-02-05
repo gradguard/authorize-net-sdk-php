@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing OrderType
  *
- * 
+ *
  * XSD Type: orderType
  */
 class OrderType implements \JsonSerializable
@@ -525,12 +525,7 @@ class OrderType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

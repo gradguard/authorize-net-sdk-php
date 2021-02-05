@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerPaymentProfileSortingType
  *
- * 
+ *
  * XSD Type: CustomerPaymentProfileSorting
  */
 class CustomerPaymentProfileSortingType implements \JsonSerializable
@@ -93,12 +93,7 @@ class CustomerPaymentProfileSortingType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

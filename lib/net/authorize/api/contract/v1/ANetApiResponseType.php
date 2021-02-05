@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ANetApiResponseType
  *
- * 
+ *
  * XSD Type: ANetApiResponse
  */
 class ANetApiResponseType implements \JsonSerializable
@@ -120,12 +120,7 @@ class ANetApiResponseType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

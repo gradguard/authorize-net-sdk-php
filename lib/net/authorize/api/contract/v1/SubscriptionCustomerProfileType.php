@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing SubscriptionCustomerProfileType
  *
- * 
+ *
  * XSD Type: subscriptionCustomerProfileType
  */
 class SubscriptionCustomerProfileType extends CustomerProfileExType implements \JsonSerializable
@@ -68,6 +68,7 @@ class SubscriptionCustomerProfileType extends CustomerProfileExType implements \
     }
 
 
+
     // Json Serialize Code
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
@@ -95,14 +96,9 @@ class SubscriptionCustomerProfileType extends CustomerProfileExType implements \
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return array_merge(parent::jsonSerialize(), $values);
     }
-    
+
     // Json Set Code
     public function set($data)
     {

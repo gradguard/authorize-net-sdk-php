@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing PaymentDetailsType
  *
- * 
+ *
  * XSD Type: paymentDetails
  */
 class PaymentDetailsType implements \JsonSerializable
@@ -309,12 +309,7 @@ class PaymentDetailsType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

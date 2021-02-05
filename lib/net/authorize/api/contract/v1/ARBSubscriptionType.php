@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ARBSubscriptionType
  *
- * 
+ *
  * XSD Type: ARBSubscriptionType
  */
 class ARBSubscriptionType implements \JsonSerializable
@@ -309,12 +309,7 @@ class ARBSubscriptionType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

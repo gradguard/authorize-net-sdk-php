@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerAddressType
  *
- * 
+ *
  * XSD Type: customerAddressType
  */
 class CustomerAddressType extends NameAndAddressType implements \JsonSerializable
@@ -93,6 +93,7 @@ class CustomerAddressType extends NameAndAddressType implements \JsonSerializabl
     }
 
 
+
     // Json Serialize Code
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
@@ -120,14 +121,9 @@ class CustomerAddressType extends NameAndAddressType implements \JsonSerializabl
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return array_merge(parent::jsonSerialize(), $values);
     }
-    
+
     // Json Set Code
     public function set($data)
     {

@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerType
  *
- * 
+ *
  * XSD Type: customerType
  */
 class CustomerType implements \JsonSerializable
@@ -228,12 +228,7 @@ class CustomerType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

@@ -9,6 +9,7 @@ class GetMerchantDetailsRequest extends ANetApiRequestType
 {
 
 
+
     // Json Serialize Code
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
@@ -36,13 +37,8 @@ class GetMerchantDetailsRequest extends ANetApiRequestType
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return array_merge(parent::jsonSerialize(), $values);
     }
-    
+
 }
 

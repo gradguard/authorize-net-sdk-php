@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerPaymentProfileBaseType
  *
- * 
+ *
  * XSD Type: customerPaymentProfileBaseType
  */
 class CustomerPaymentProfileBaseType implements \JsonSerializable
@@ -93,12 +93,7 @@ class CustomerPaymentProfileBaseType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing TransactionSummaryType
  *
- * 
+ *
  * XSD Type: transactionSummaryType
  */
 class TransactionSummaryType implements \JsonSerializable
@@ -498,12 +498,7 @@ class TransactionSummaryType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

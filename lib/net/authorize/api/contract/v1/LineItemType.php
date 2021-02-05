@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing LineItemType
  *
- * 
+ *
  * XSD Type: lineItemType
  */
 class LineItemType implements \JsonSerializable
@@ -741,12 +741,7 @@ class LineItemType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code

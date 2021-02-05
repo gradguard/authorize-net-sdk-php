@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerPaymentProfileMaskedType
  *
- * 
+ *
  * XSD Type: customerPaymentProfileMaskedType
  */
 class CustomerPaymentProfileMaskedType extends CustomerPaymentProfileBaseType implements \JsonSerializable
@@ -236,6 +236,7 @@ class CustomerPaymentProfileMaskedType extends CustomerPaymentProfileBaseType im
     }
 
 
+
     // Json Serialize Code
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
@@ -263,14 +264,9 @@ class CustomerPaymentProfileMaskedType extends CustomerPaymentProfileBaseType im
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return array_merge(parent::jsonSerialize(), $values);
     }
-    
+
     // Json Set Code
     public function set($data)
     {

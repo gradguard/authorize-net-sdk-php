@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing OtherTaxType
  *
- * 
+ *
  * XSD Type: otherTaxType
  */
 class OtherTaxType implements \JsonSerializable
@@ -201,12 +201,7 @@ class OtherTaxType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
     
     // Json Set Code
