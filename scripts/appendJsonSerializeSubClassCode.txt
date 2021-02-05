@@ -1,3 +1,4 @@
+
     // Json Serialize Code
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
@@ -25,7 +26,7 @@
                 }
             }
         }
-        return $values;
+        return array_merge(parent::jsonSerialize(), $values);
     }
-    
+
 }
